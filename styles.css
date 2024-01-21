@@ -1,0 +1,40 @@
+body {
+    height: 100vh; /* Full height of the viewport */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+    background-color: rgb(229, 245, 245);
+}
+
+#flightForm {
+    width: 100%; /* Adjust width as per requirement */
+    max-width: 400px; /* Ensures form doesn't stretch too wide on larger screens */
+    margin: auto; /* Centers the form */
+}
+
+h1{
+    margin-bottom: 40px;
+}
+
+#num{
+    margin-bottom: 20px;
+}
+
+#name{
+    margin-bottom: 20px;
+}
+
+input, select{
+    height: 40px;
+    width: 300px;
+    border-radius: 5px;
+    border: 1px solid rgb(0, 0, 0);
+    padding: 5px;
+
+}
+
+#flightDetails{
+    margin-bottom: 20px;
+    margin-top: 80px;
+}
