@@ -3,5 +3,6 @@ This app enables you to track your flight. Simply input your airline name and nu
 <br>
 </br>
 ![image](https://github.com/Rishit30G/Flight-Tracker/assets/74411873/3e7007a3-c038-4bb9-a6be-614df20a0741)
-![image](https://github.com/Rishit30G/Flight-Tracker/assets/74411873/30d6d7a0-5c46-4a66-aaf6-22e748b48dea)
+![image](https://github.com/Rishit30G/Flight-Tracker/assets/74411873/e620a067-06a7-4906-884a-c7c008baa854)
+
 
