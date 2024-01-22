@@ -38,3 +38,16 @@ input, select{
     margin-bottom: 20px;
     margin-top: 80px;
 }
+
+@media screen and (max-width: 600px) {
+    h1{
+        font-size: 20px;
+    }
+    h3{
+        font-size: 20px;
+    }
+    h5{
+        font-size: 15px;
+    }
+    
+}

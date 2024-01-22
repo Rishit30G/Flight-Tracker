@@ -1,6 +1,7 @@
 document.getElementById('flightForm').addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevent the default form submission
+    event.preventDefault(); 
     
+    document.getElementById('loader').style.display = 'block';
     const flightNumber = document.getElementById('num').value;
     const flightName = document.getElementById('name').value;
     const formattedDate = getFormattedDate();
@@ -19,22 +20,23 @@ document.getElementById('flightForm').addEventListener('submit', function(event)
         })
         .then(data => {
             // Process your data here
+            document.getElementById('loader').style.display = 'none';
              displayFlightDetails(data);
              function displayFlightDetails(data) {
                 const departure = data[0].departure[0]; 
                 const arrival = data[1].arrival[0];
 
                 const detailsHTML = `
-                <h1>Flight Status</h1>
+                <h1>Flight Status ⌚</h1>
                 <div>
-                    <h3>Departure</h3>
+                    <h3>Departure 🛫</h3>
                     <p>Status: ${departure.status}</p>
                     <p>Airport: ${departure['Airport:']}</p>
                     <p>Scheduled Time: ${departure['Scheduled Time:']}</p>
                     <p>Takeoff Time: ${departure['Takeoff Time:']}</p>
                 </div>
                 <div>
-                    <h3>Arrival</h3>
+                    <h3>Arrival 🛬</h3>
                     <p>Airport: ${arrival['Airport:']}</p>
                     <p>Scheduled Time: ${arrival['Scheduled Time:']}</p>
                     <p>Estimated Time: ${arrival['Estimated Time:']}</p>
@@ -48,7 +50,11 @@ document.getElementById('flightForm').addEventListener('submit', function(event)
             // For example, display the flight details
         })
         .catch(error => {
-        console.error('There was a problem with the fetch operation:', error);
+            
+            document.getElementById('loader').style.display = 'none';
+            console.error('There was a problem with the fetch operation:', error);
+            document.getElementById('flightDetails').innerHTML = `
+            <h1>No Flights Found</h1>`; 
         });
 });
 
